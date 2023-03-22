@@ -11,13 +11,13 @@ public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
         builder.HasData(
             new IdentityRole
             {
-                Id = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
+                Id = "7b8ea170-e1b2-49bf-a81a-e392e14ef238",
                 Name = "Employee",
                 NormalizedName = "EMPLOYEE"
             },
             new IdentityRole
             {
-                Id = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
+                Id = "706e3b97-eb09-4cfa-9490-a20a8021c501",
                 Name = "Administrator",
                 NormalizedName = "ADMINISTRATOR"
             }

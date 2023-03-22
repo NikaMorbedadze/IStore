@@ -6,6 +6,7 @@ using IStore.Application.Contracts.Identity;
 using IStore.Application.Models.Identity;
 using IStore.Identity.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace IStore.Identity.Services;
@@ -17,11 +18,11 @@ public class AuthService : IAuthService
     private readonly JwtSettings _jwtSettings;
 
     public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
-        JwtSettings jwtSettings)
+        IOptions<JwtSettings> jwtSettings)
     {
         _userManager = userManager;
         _signInManager = signInManager;
-        _jwtSettings = jwtSettings;
+        _jwtSettings = jwtSettings.Value;
     }
 
     public async Task<AuthResponse> Login(AuthRequest request)

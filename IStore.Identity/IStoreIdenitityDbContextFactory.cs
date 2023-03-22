@@ -15,7 +15,7 @@ public class IStoreIdenitityDbContextFactory : IDesignTimeDbContextFactory<IStor
             .Build();
 
         var builder = new DbContextOptionsBuilder<IStoreIdentityDbContext>();
-        var connectionString = configuration.GetConnectionString("IStoreConnectionString");
+        var connectionString = configuration.GetConnectionString("IStoreIdentityConnectionString");
         builder.UseSqlServer(connectionString);
         return new IStoreIdentityDbContext(builder.Options);
     }

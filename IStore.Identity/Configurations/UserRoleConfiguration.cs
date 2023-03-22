@@ -5,20 +5,20 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace IStore.Identity.Configurations;
 
-public class UserRoleConfiguration : IEntityTypeConfiguration<ApplicationUser>
+public class UserRoleConfiguration : IEntityTypeConfiguration<IdentityUserRole<string>>
 {
-    public void Configure(EntityTypeBuilder<ApplicationUser> builder)
+    public void Configure(EntityTypeBuilder<IdentityUserRole<string>> builder)
     {
         builder.HasData(
             new IdentityUserRole<string>
             {
-                RoleId = "cbc43a8e-f7bb-4445-baaf-1add431ffbbf",
-                UserId = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                RoleId = "7b8ea170-e1b2-49bf-a81a-e392e14ef238",
+                UserId = "477f9652-bf0d-4cf8-8eb7-4f0fe7faffd3"
             },
             new IdentityUserRole<string>
             {
-                RoleId = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
-                UserId = "9e224968-33e4-4652-b7b7-8574d048cdb9"
+                RoleId = "706e3b97-eb09-4cfa-9490-a20a8021c501",
+                UserId = "c96c9530-fcf8-4a61-b0a7-f01df388c8f0"
             }
         );
     }

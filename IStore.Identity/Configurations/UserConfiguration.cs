@@ -13,7 +13,7 @@ public class UserConfiguration : IEntityTypeConfiguration<ApplicationUser>
         builder.HasData(
             new ApplicationUser
             {
-                Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
+                Id = "477f9652-bf0d-4cf8-8eb7-4f0fe7faffd3",
                 Email = "admin@localhost.com",
                 NormalizedEmail = "ADMIN@LOCALHOST.COM",
                 FirstName = "System",
@@ -25,7 +25,7 @@ public class UserConfiguration : IEntityTypeConfiguration<ApplicationUser>
             },
             new ApplicationUser
             {
-                Id = "9e224968-33e4-4652-b7b7-8574d048cdb9",
+                Id = "c96c9530-fcf8-4a61-b0a7-f01df388c8f0",
                 Email = "user@localhost.com",
                 NormalizedEmail = "USER@LOCALHOST.COM",
                 FirstName = "System",
@@ -35,6 +35,7 @@ public class UserConfiguration : IEntityTypeConfiguration<ApplicationUser>
                 PasswordHash = hasher.HashPassword(null, "P@ssword1"),
                 EmailConfirmed = true
             }
+            
         );
     }
 }
