@@ -2,7 +2,7 @@
 
 namespace IStore.Application.Exceptions;
 
-public class ValidationException
+public class ValidationException : ApplicationException
 {
     public List<string> Errors { get; set; } = new();
 

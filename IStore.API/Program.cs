@@ -1,3 +1,4 @@
+using IStore.API.Middleware;
 using IStore.Application;
 using IStore.Identity;
 using IStore.Infrastructure;
@@ -37,6 +38,7 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseSwagger();
 app.UseSwaggerUI();
