@@ -1,3 +1,4 @@
+using IStore.Application;
 using IStore.Identity;
 using IStore.Infrastructure;
 using Microsoft.OpenApi.Models;
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureIdentityServices(builder.Configuration);
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
+builder.Services.ConfigureApplicationServices();
 builder.Services.AddHttpContextAccessor();
 AddSwaggerDoc(builder.Services);
 
