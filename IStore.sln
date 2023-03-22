@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IStore.API", "IStore.API\IS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IStore.Application", "IStore.Application\IStore.Application.csproj", "{64A012D2-DACE-443F-8B1A-CED60B2868B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IStore.Infrastructure", "IStore.Infrastructure\IStore.Infrastructure.csproj", "{1911B68E-1B50-46A0-8EFF-EB2985507483}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,7 @@ Global
 		{F64D3604-9772-420C-886F-8852C36320FB} = {185048F6-4887-418F-9A23-FB57450E95A7}
 		{6B827850-6324-427F-BA0B-499E16DDBE4F} = {F64D3604-9772-420C-886F-8852C36320FB}
 		{64A012D2-DACE-443F-8B1A-CED60B2868B1} = {3F74C1B2-72FB-4269-A800-234B61CBC842}
+		{1911B68E-1B50-46A0-8EFF-EB2985507483} = {53AD2C77-9597-4144-9CB2-F26EE4708C83}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6CA3BA07-E50F-4CBF-B63E-2CC946763B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,5 +43,9 @@ Global
 		{64A012D2-DACE-443F-8B1A-CED60B2868B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64A012D2-DACE-443F-8B1A-CED60B2868B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64A012D2-DACE-443F-8B1A-CED60B2868B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1911B68E-1B50-46A0-8EFF-EB2985507483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1911B68E-1B50-46A0-8EFF-EB2985507483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1911B68E-1B50-46A0-8EFF-EB2985507483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1911B68E-1B50-46A0-8EFF-EB2985507483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

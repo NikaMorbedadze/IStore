@@ -1,13 +1,17 @@
 using IStore.Identity;
+using IStore.Infrastructure;
 using Microsoft.OpenApi.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
 #region Services
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureIdentityServices(builder.Configuration);
+builder.Services.ConfigureInfrastructureServices(builder.Configuration);
 builder.Services.AddHttpContextAccessor();
 AddSwaggerDoc(builder.Services);
 
@@ -25,6 +29,7 @@ builder.Services.AddCors(o =>
 var app = builder.Build();
 
 #region HTTP request pipeline
+
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -39,6 +44,7 @@ app.UseAuthorization();
 app.UseCors("CorsPolicy");
 app.MapControllers();
 app.Run();
+
 #endregion
 
 
@@ -70,7 +76,6 @@ void AddSwaggerDoc(IServiceCollection services)
                     Scheme = "oauth2",
                     Name = "Bearer",
                     In = ParameterLocation.Header,
-
                 },
                 new List<string>()
             }
@@ -80,8 +85,6 @@ void AddSwaggerDoc(IServiceCollection services)
         {
             Version = "v1",
             Title = "IStore Api",
-
         });
-
     });
 }
